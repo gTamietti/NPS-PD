@@ -11,17 +11,17 @@
 
 .steps::after{
     content: "";
-    width: 380px;
+    width: 500px;
     border-bottom: 1px solid #ccc;
     position: absolute;
-    top: 20px;
+    top: 27px;
 }
 
 .step{
     text-align: center;
     background-color: #fff;
     z-index: 1;
-    width: 120px;
+    width:120px;
     padding: 0.5rem;
 }
 
