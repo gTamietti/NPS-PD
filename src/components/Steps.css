@@ -11,7 +11,7 @@
 
 .steps::after{
     content: "";
-    width: 500px;
+    width: 700px;
     border-bottom: 1px solid #ccc;
     position: absolute;
     top: 27px;
@@ -21,7 +21,7 @@
     text-align: center;
     background-color: #fff;
     z-index: 1;
-    width:120px;
+    width:220px;
     padding: 0.5rem;
 }
 
@@ -37,3 +37,8 @@
 .active > svg{
     fill: #7076f4;
 }
+
+.active.green > svg{
+    fill: rgb(34, 226, 34);
+}
+

@@ -13,16 +13,16 @@ import{
       <div className="review-form">
        <div className="text-container">
       <p>
-       “”
+       “Quão úteis foram as monitorias para esclarecer suas dúvidas em programação, numa escala de 0 a 10?”
       </p>
       </div>
         <div className="form-control score-container">
           <label className="radio-container">
             <input type="radio" 
-            value="unsatisfied" 
+            value="detrator1" 
             name="review" 
             required 
-            checked={data.review2 === "unsatisfied"}
+            checked={data.review2 === "detrator1"}
             onChange={(e)=>updateFieldHandler("review2",e.target.value)}
             />
             <BsFillEmojiFrownFill />
@@ -30,10 +30,10 @@ import{
           </label>
           <label className="radio-container">
             <input type="radio" 
-            value="neutral" 
+            value="detrator" 
             name="review" 
             required 
-            checked={data.review2 === "neutral"}
+            checked={data.review2 === "detrator"}
             onChange={(e)=>updateFieldHandler("review2",e.target.value)}
             />
             <BsFillEmojiNeutralFill />
@@ -41,10 +41,10 @@ import{
           </label>
           <label className="radio-container">
             <input type="radio" 
-            value="satisfied" 
+            value="neutro" 
             name="review" 
             required 
-            checked={data.review2 === "satisfied"}
+            checked={data.review2 === "neutro"}
             onChange={(e)=>updateFieldHandler("review2",e.target.value)}
             />
             <BsFillEmojiSmileFill />
@@ -52,10 +52,10 @@ import{
           </label>
           <label className="radio-container">
             <input type="radio" 
-            value="very_satisfied"
+            value="promotor"
              name="review" 
              required 
-            checked={data.review2 === "very_satisfied"}
+            checked={data.review2 === "promotor"}
             onChange={(e)=>updateFieldHandler("review2",e.target.value)}
              />
             <BsFillEmojiHeartEyesFill />

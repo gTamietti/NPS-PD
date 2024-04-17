@@ -19,10 +19,10 @@ const ReviewForm = ({data,updateFieldHandler}) => {
       <div className="form-control score-container">
         <label className="radio-container">
           <input type="radio" 
-          value="unsatisfied" 
+          value="detrator" 
           name="review" 
           required 
-          checked={data.review1 === "unsatisfied"}
+          checked={data.review1 === "detrator"}
           onChange={(e)=>updateFieldHandler("review1",e.target.value)}
           />
           <BsFillEmojiFrownFill />
@@ -30,10 +30,10 @@ const ReviewForm = ({data,updateFieldHandler}) => {
         </label>
         <label className="radio-container">
           <input type="radio" 
-          value="neutral" 
+          value="detrator1" 
           name="review" 
           required 
-          checked={data.review1 === "neutral"}
+          checked={data.review1 === "detrator1"}
           onChange={(e)=>updateFieldHandler("review1",e.target.value)}
           />
           <BsFillEmojiNeutralFill />
@@ -41,10 +41,10 @@ const ReviewForm = ({data,updateFieldHandler}) => {
         </label>
         <label className="radio-container">
           <input type="radio" 
-          value="satisfied" 
+          value="neutro" 
           name="review" 
           required 
-          checked={data.review1 === "satisfied"}
+          checked={data.review1 === "neutro"}
           onChange={(e)=>updateFieldHandler("review1",e.target.value)}
           />
           <BsFillEmojiSmileFill />
@@ -52,10 +52,10 @@ const ReviewForm = ({data,updateFieldHandler}) => {
         </label>
         <label className="radio-container">
           <input type="radio" 
-          value="very_satisfied"
+          value="promotor"
            name="review" 
            required 
-          checked={data.review1 === "very_satisfied"}
+          checked={data.review1 === "promotor"}
           onChange={(e)=>updateFieldHandler("review1",e.target.value)}
            />
           <BsFillEmojiHeartEyesFill />

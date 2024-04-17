@@ -23,6 +23,14 @@ const Steps = ({currentStep}) => {
         <p>Etapa 4</p>
       </div> 
       <div className={`step ${currentStep >= 4 ? "active" : ""}`}>
+        <AiOutlineStar />
+        <p>Etapa 5</p>
+      </div> 
+      <div className={`step ${currentStep >= 5 ? "active" : ""}`}>
+        <AiOutlineStar />
+        <p>Etapa 6</p>
+      </div> 
+      <div className={`step ${currentStep >= 6 ? "active green" : currentStep>=6 ? "active" : ""}`}>
         <FiSend />
         <p>Envio</p>
       </div> 
