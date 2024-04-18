@@ -39,6 +39,38 @@ function App() {
     }
   };
   
+  const calculateNPS = () => {
+    //armazena cada uma das strings de review em reviewScores
+    const reviewScores = [  
+      data.review1,
+      data.review2,
+      data.review3,
+      data.review4,
+      data.review5,
+      data.review6
+    ];
+  //review serve de parametro para ser transformada de string para numero comparando seu valor
+    const numericalScores = reviewScores.map(review => {
+      switch(review) {
+        case "promotor":
+          return 10;
+        case "neutro":
+          return 8; 
+        case "detrator":
+          return 6; 
+        case "detrator1":
+          return 6;
+      }
+    });
+  //calculo de NPS
+    const promoters = numericalScores.filter(score => score === 10).length;
+    const passives = numericalScores.filter(score => score === 8).length;
+    const detractors = numericalScores.filter(score => score === 6).length;
+    const totalResponses = promoters + passives + detractors;
+    const nps = ((promoters - detractors) / totalResponses) * 100;
+    return nps;
+  };
+  
 
   const handleSubmit = async () => {
     setSentiment(null);
@@ -47,10 +79,20 @@ function App() {
     console.log("review2:", data.review2);
     console.log("review3:", data.review3);
     console.log("review4:", data.review4);
+    console.log("review5:", data.review5);
+    console.log("review6:", data.review6);
     console.log("comment:", data.comment);
     console.log("sentiment:", sentiment); // Exibe o resultado da análise de sentimento do codigo Pln.py
+
+    const nps=calculateNPS();
+    console.log("NPS:",nps);
     console.log("");
   };
+
+  const timeout=()=>{
+    alert("O formulário foi enviado com sucesso");
+    window.location.reload();
+    }
   
     //usa o data para receber o valor de review e comment
   const formComponents = [

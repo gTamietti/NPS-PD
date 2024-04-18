@@ -13,7 +13,7 @@ import{
       <div className="review-form">
       <div className="text-container">
       <p>
-       “Qual é sua pontuação de 0 a 10 para a disponibilidade dos monitores em responder suas dúvidas fora das sessões de monitoria?”
+       “Qual é sua pontuação de 0 a 10 para a disponibilidade dos monitores em responder suas dúvidas fora das sessões de atendimento?”
       </p>
       </div>
         <div className="form-control score-container">

@@ -13,7 +13,7 @@ import{
       <div className="review-form">
      <div className="text-container">
       <p>
-       “Quão confortável você se sentiu em fazer perguntas e participar ativamente das monitorias, de 0 a 10?"
+       “Quão confortável você se sentiu em fazer perguntas e participar ativamente dos atendimentos, de 0 a 10?"
       </p>
       </div>
         <div className="form-control score-container">
