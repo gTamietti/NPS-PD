@@ -23,12 +23,18 @@ const formTemplate = {
 function App() {
   const [data, setData] = useState(formTemplate);
   const [sentiment, setSentiment] = useState(null); // Estado para armazenar o resultado da análise de sentimento
+  const [selectedOption, setSelectedOption] = useState("");
 
   const updateFieldHandler = (key, value) => {
     setData((prev) => {
       return { ...prev, [key]: value };
     });
   };
+
+  //select de monitor
+  const handleDropdownChange = (selectedValue) =>{
+    setSelectedOption(selectedValue)
+  }
 
   const sendComment = async (comment) => {
     try {
@@ -86,6 +92,7 @@ function App() {
 
     const nps=calculateNPS();
     console.log("NPS:",nps);
+    console.log("Monitor:",selectedOption)
     console.log("");
   };
 
@@ -102,7 +109,7 @@ function App() {
     <ReviewFormFour data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewFormFive data={data} updateFieldHandler={updateFieldHandler} />,
     <ReviewFormSix data={data} updateFieldHandler={updateFieldHandler} />,
-    <Thanks data={data} />,
+    <Thanks data={data} onDropdownChange={handleDropdownChange} />,
   ];
 
   const { currentStep, currentComponent, changeStep, isFirstStep, isLastStep } = useForm(formComponents);
